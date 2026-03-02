@@ -12,11 +12,11 @@ GAAS/
 ├── GAAS.h               # class declarations
 ├── utils.cpp            # helper utilities
 ├── dataset/             # input graph files
-│   ├── DBLP_sym
-│   ├── DBLP_sym_cost_001DEG.txt
+│   ├── DBLP
+│   ├── DBLP_cost_001DEG.txt
 │   └── ...
 ├── realization/         # precomputed realizations
-│   ├── DBLP_sym_pw_ic0.txt
+│   ├── DBLP_pw_ic0.txt
 │   ├── ...
 ├── Makefile             # build instructions
 └── README.md          
@@ -24,7 +24,7 @@ GAAS/
 
 ## 📐 Preparation
 
-Graphs are read from text files in the `dataset/` directory. The first two integers specify the number of nodes and edges. Each subsequent line contains a source node and destination node pair (0‑indexed). Social networks including datasets used in experiments can be found in [SNAP](https://snap.stanford.edu/data/).
+Graphs should be stored and read from text files in the `dataset/` directory. The first two integers specify the number of nodes and edges. Each subsequent line contains a source node and destination node pair (0‑indexed). Social networks including datasets [DBLP](https://snap.stanford.edu/data/com-DBLP.html), [YouTube](https://snap.stanford.edu/data/com-Youtube.html), [Flickr](http://konect.cc/networks/flickr-growth/), and [LiveJournal](https://snap.stanford.edu/data/soc-LiveJournal1.html) used in experiments.
 
 A corresponding cost file named `<dataset>_cost_001DEG.txt` must be present; the file contains one cost value per node.
 
@@ -48,11 +48,11 @@ The `gaas` executable takes command–line arguments that specify the dataset, m
 ./gaas -dataset_No <dataset> -eps <epsilon> -model <IC_or_LT> ...
 ```
 
-* `-dataset_No`: path under `dataset/` (e.g., `DBLP_sym`)
+* `-dataset_No`: path under `dataset/` (e.g., `0` for DBLP, `1` for YouTube, `2`for Flickr, and `3` for LiveJournal)
 * `-eps`: estimation error of mRR-sets (e.g., `0.5`)
 * `-model`: `1` for IC model, `0` for LT model
 * `-eta`: target influence threshold (e.g., `2000`)
-* `-batch`：batch size b (e.g., `4)
+* `-batch`：batch size b (e.g., `4`)
 * `-start_time`: the index of used random realization (e.g., `0`)
 * `-reuse` : configure for activating reuse of mRR-sets (e.g., `1`) or regenerate mRR-sets in each round as used in experimental analysis (e.g., `0`)
 * `-beta` : configure for work load balance in mRR-set update (e.g., `8`)

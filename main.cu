@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
     arg.reuse = reuse;
     arg.beta = beta;
 
-    std::vector<std::string> dataset={"DBLP_sym","Youtube_sym","flickr","livejournal"};
+    std::vector<std::string> dataset={"DBLP","YouTube","Flickr","LiveJournal"};
     std::string file_name =  dataset[arg.dataset_No];
     const bool ICLT = arg.model;
 

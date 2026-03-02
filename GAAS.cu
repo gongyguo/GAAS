@@ -597,7 +597,7 @@ void GAAS::load_costs(const std::string dataset, const int num_nodes){
 void GAAS::load_realization(int index, int dataset_No, bool IC)
 {	
     for (unsigned int i = 0; i < PO.size(); ++i)PO[i].clear();
-    std::vector<std::string> dataset={"DBLP_sym","Youtube_sym","flickr","livejournal"};
+    std::vector<std::string> dataset={"DBLP","YouTube","Flickr","LiveJournal"};
     std::string pw_path;
     if(IC){
         pw_path="realization/" + dataset[dataset_No] + "_pw_ic" + std::to_string(index) + ".txt";

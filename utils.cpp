@@ -101,7 +101,7 @@ void load_graph(string graph_file, vector<vector<uint32_t>> &gT, vector<vector<u
 
 int main(int argc, char **argv)
 {
-    vector<std::string> dataset = {"DBLP_sym","Youtube_sym","flickr","livejournal"};
+    vector<std::string> dataset = {"DBLP","YouTube","Flickr","LiveJournal"};
 
     uint32_t n = 0, m = 0;
     vector<vector<uint32_t>> gT;
