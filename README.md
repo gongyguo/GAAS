@@ -63,5 +63,5 @@ The `gaas` executable takes command–line arguments that specify the dataset, m
 
 * Core logic resides in `GAAS.cu` and `GAAS.h`.
 * `utils.cpp` contains ancillary functions (e.g., generating cost file and random realizations).
-* CUDA kernels for mRR set generation, update, and seed selection are defined in the *cu files.
+* CUDA kernels for mRR set generation, update, and seed selection are defined in the `kernel.cu` and `kernel.h`.
 
