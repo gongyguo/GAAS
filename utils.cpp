@@ -109,7 +109,7 @@ int main(int argc, char **argv)
     vector<vector<double>> probT;
     vector<vector<int>> PO;
 
-    int dataset_No = 4;
+    int dataset_No = 0;
     bool model = 1; // IC
     int run_times = 10;
     for (int i = 0; i < argc; i++)

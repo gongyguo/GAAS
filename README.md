@@ -24,7 +24,7 @@ GAAS/
 
 ## 📐 Preparation
 
-Graphs should be stored and read from text files in the `dataset/` directory. The first two integers specify the number of nodes and edges. Each subsequent line contains a source node and destination node pair (0‑indexed). Social networks including datasets [DBLP](https://snap.stanford.edu/data/com-DBLP.html), [YouTube](https://snap.stanford.edu/data/com-Youtube.html), [Flickr](http://konect.cc/networks/flickr-growth/), and [LiveJournal](https://snap.stanford.edu/data/soc-LiveJournal1.html) used in experiments.
+Graphs should be stored and read from text files in the `dataset/` directory. The first two integers specify the number of nodes and edges. Each subsequent line contains a source node and destination node pair (0‑indexed). Social networks including datasets [DBLP](https://snap.stanford.edu/data/com-DBLP.html), [YouTube](https://snap.stanford.edu/data/com-Youtube.html), [Flickr](http://konect.cc/networks/flickr-growth/), and [LiveJournal](https://snap.stanford.edu/data/soc-LiveJournal1.html) used in experiments. We have uploaded the DBLP dataset for demonstration, while other datasets can be downloaded via links.
 
 A corresponding cost file named `<dataset>_cost_001DEG.txt` must be present; the file contains one cost value per node.
 
